@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quitline 1600 — คุณไม่จำเป็นต้องเริ่มต้นคนเดียว</title>
+    <meta
+      name="description"
+      content="สายด่วนเลิกบุหรี่ 1600 ให้คำปรึกษาเพื่อช่วยคุณลดหรือเลิกบุหรี่ บุหรี่ไฟฟ้า และนิโคติน เริ่มต้นเมื่อคุณพร้อม โทรหรือแชทได้ตามที่คุณสะดวก"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Component styles for sections not yet covered by style.css.
+         Kept inline (rather than editing style.css) per project instruction
+         to edit only index.html for homepage work. Reuses the design tokens
+         already defined in style.css :root. -->
+    <style>
+      .hero__eyebrow {
+        font-size: var(--text-small);
+        font-weight: 600;
+        color: var(--color-primary);
+      }
+      .hero__supporting {
+        color: var(--color-text-muted);
+        max-width: 52ch;
+      }
+      .hero__cta-group {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-5);
+      }
+      .hero__cta-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-2);
+      }
+      .hero__cta-label {
+        font-size: var(--text-small);
+        font-weight: 600;
+        color: var(--color-text-muted);
+      }
+      @media (min-width: 640px) {
+        .hero__cta-group {
+          flex-direction: row;
+          align-items: flex-start;
+          gap: var(--space-7);
+        }
+      }
+
+      .logo-link {
+        display: inline-flex;
+        align-items: center;
+      }
+      .site-logo {
+        height: var(--logo-header-height, 44px);
+        width: auto;
+      }
+      .btn-secondary--compact {
+        width: auto;
+        min-height: 40px;
+        padding-inline: var(--space-4);
+        font-size: var(--text-small);
+      }
+
+      /* Support someone else */
+      .support-someone__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-4);
+      }
+      @media (min-width: 768px) {
+        .support-someone__inner {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+
+      .final-cta__alt {
+        color: var(--color-text-muted);
+      }
+      .final-cta__alt a {
+        color: var(--color-primary);
+        font-weight: 600;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+
+      .site-footer__logo {
+        height: var(--logo-footer-height, 52px);
+        width: auto;
+        margin-bottom: var(--space-2);
+      }
+      .footer-col .line-id {
+        font-size: var(--text-small);
+        color: var(--color-text-muted);
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">ข้ามไปเนื้อหาหลัก</a>
+
+    <!-- Header: official logo + on-page nav + language toggle + Call (primary) / Chat (alternative) -->
+    <header class="site-header">
+      <div class="wrap site-header__inner">
+        <a class="logo-link" href="index.html" aria-label="Quitline 1600 หน้าแรก">
+          <img
+            class="site-logo"
+            src="../ui/Quitline 1600 logo.png"
+            alt="Quitline 1600 สายด่วนเลิกบุหรี่"
+          />
+        </a>
+
+        <nav class="site-nav" aria-label="เมนูหลัก">
+          <ul class="site-nav__list">
+            <li><a href="#audience">สนใจเลิกบุหรี่</a></li>
+            <li><a href="#what-to-expect">เมื่อคุณติดต่อเรา</a></li>
+            <li><a href="#support-topics">คำแนะนำ</a></li>
+            <li><a href="#faq">คำถามที่พบบ่อย</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <p class="lang-toggle">
+            <span class="lang-toggle__current" aria-current="true">TH</span>
+            <span aria-hidden="true">|</span>
+            <a href="./en.html" hreflang="en">EN</a>
+          </p>
+
+          <!-- Chat destination: official LINE OA add-friend link derived from the
+               confirmed LINE ID (LINE ID: @wanmai1600). Confirm against the
+               official published Chat URL/widget trigger before launch. -->
+          <a class="btn btn-secondary btn-secondary--compact" href="https://line.me/R/ti/p/@wanmai1600">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+              <path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-4 4v-4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" />
+            </svg>
+            <span>แชทกับเรา</span>
+          </a>
+
+          <a class="btn btn-primary btn-primary--compact" href="tel:1600">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.6c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"
+              />
+            </svg>
+            <span>โทร 1600</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero: must answer "what is this / who's it for / what do I do next" within 5 seconds -->
+      <section class="hero" id="hero">
+        <div class="wrap hero__grid">
+          <div class="hero__inner">
+            <p class="hero__eyebrow">สายด่วนเลิกบุหรี่ 1600</p>
+            <h1 class="hero__title">คุณไม่จำเป็นต้องเริ่มต้นคนเดียว</h1>
+            <p class="hero__lead">เราพร้อมช่วยคุณลดหรือเลิกบุหรี่ บุหรี่ไฟฟ้า และนิโคติน</p>
+            <p class="hero__supporting">
+              ไม่ว่าคุณกำลังคิดจะลด พร้อมจะเลิก หรืออยากกลับมาเริ่มใหม่อีกครั้ง
+              คุณสามารถเลือกเริ่มต้นในช่องทางที่สะดวกสำหรับคุณ
+            </p>
+
+            <div class="hero__cta-group">
+              <div class="hero__cta-item">
+                <p class="hero__cta-label">พร้อมพูดคุยตอนนี้?</p>
+                <a class="btn btn-primary" href="tel:1600">
+                  <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.6c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"
+                    />
+                  </svg>
+                  <span>โทร 1600</span>
+                </a>
+              </div>
+              <div class="hero__cta-item">
+                <p class="hero__cta-label">ยังไม่สะดวกโทร?</p>
+                <a class="btn btn-secondary" href="https://line.me/R/ti/p/@wanmai1600">
+                  <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+                    <path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-4 4v-4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" />
+                  </svg>
+                  <span>แชทกับเรา</span>
+                </a>
+              </div>
+            </div>
+
+            <a class="hero__secondary-link" href="#what-to-expect">ดูขั้นตอนก่อนตัดสินใจ</a>
+          </div>
+
+          <!-- Hero image slider; teal/neutral controls only (no CTA-orange, per
+               color-guideline.md). First slide shows with no JS; script.js only
+               adds rotation/navigation on top of the working static markup. -->
+          <div class="hero__art">
+            <div class="hero-slider" aria-label="สื่อรณรงค์ลดและเลิกบุหรี่">
+              <div class="hero-slider__track">
+                <figure class="hero-slider__slide is-active">
+                  <img
+                    src="../assets/hero-vaping-banner.png"
+                    alt="ข้อมูลรณรงค์เกี่ยวกับความเสี่ยงของบุหรี่ไฟฟ้าและช่องทางติดต่อ Quitline 1600"
+                    width="1200"
+                    height="960"
+                  />
+                </figure>
+
+                <figure class="hero-slider__slide">
+                  <img
+                    src="../assets/hero-slide-2.png"
+                    alt="สื่อให้กำลังใจว่าผู้ใช้ยังไม่ต้องพร้อมเต็มร้อยก็สามารถเริ่มลดหรือเลิกได้"
+                    width="1200"
+                    height="960"
+                  />
+                </figure>
+
+                <figure class="hero-slider__slide">
+                  <img
+                    src="../assets/hero-slide-3.png"
+                    alt="สื่อรณรงค์ให้ค่อย ๆ ลดการใช้บุหรี่ บุหรี่ไฟฟ้า และนิโคติน"
+                    width="1200"
+                    height="960"
+                  />
+                </figure>
+              </div>
+
+              <button
+                class="hero-slider__control hero-slider__control--prev"
+                type="button"
+                aria-label="ดูภาพก่อนหน้า"
+              >
+                &lsaquo;
+              </button>
+
+              <button
+                class="hero-slider__control hero-slider__control--next"
+                type="button"
+                aria-label="ดูภาพถัดไป"
+              >
+                &rsaquo;
+              </button>
+
+              <p class="hero-slider__status" role="status" aria-live="polite">แสดงภาพที่ 1 จาก 3</p>
+
+              <div class="hero-slider__dots" aria-label="เลือกภาพสไลด์">
+                <button type="button" class="hero-slider__dot is-active" aria-label="ภาพที่ 1" aria-current="true"></button>
+                <button type="button" class="hero-slider__dot" aria-label="ภาพที่ 2"></button>
+                <button type="button" class="hero-slider__dot" aria-label="ภาพที่ 3"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Audience: no readiness gate, vaping/nicotine users explicitly included -->
+      <section class="section" id="audience" aria-labelledby="audience-heading">
+        <div class="wrap">
+          <h2 id="audience-heading" class="section__title section__title--center">ไม่ว่าคุณจะเริ่มจากตรงไหน</h2>
+          <ul class="who-grid">
+            <li class="who-card">
+              <span class="icon-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M3 15h13a2 2 0 0 1 2 2v1H3v-3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                  <path d="M18 15h1.5a1.5 1.5 0 0 1 0 3H18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <h3 class="who-card__title">ผู้ที่สูบบุหรี่</h3>
+              <p class="who-card__text">เริ่มต้นลดหรือเลิกได้ตามจังหวะที่เหมาะกับคุณ</p>
+            </li>
+            <li class="who-card who-card--emphasis">
+              <span class="icon-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M5 16h9a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="18.5" cy="16" r="1.2" fill="currentColor"/>
+                </svg>
+              </span>
+              <h3 class="who-card__title">ผู้ที่ใช้บุหรี่ไฟฟ้าหรือนิโคติน</h3>
+              <p class="who-card__text">เราพร้อมช่วยแม้คุณไม่ได้สูบบุหรี่มวน</p>
+            </li>
+            <li class="who-card">
+              <span class="icon-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M12 3a6 6 0 0 0-4 10.5V16a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.5A6 6 0 0 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                  <path d="M10 21h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <h3 class="who-card__title">ผู้ที่กำลังคิดจะลดหรือเลิก</h3>
+              <p class="who-card__text">ยังไม่ต้องพร้อม 100% ก็เริ่มคุยกับเราได้</p>
+            </li>
+            <li class="who-card">
+              <span class="icon-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <circle cx="8.5" cy="8" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="16" cy="9" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M3.5 18c.5-2.8 2.5-4.5 5-4.5s4.5 1.7 5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M13.5 14c2 0 3.6 1.5 4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <h3 class="who-card__title">ครอบครัวและเพื่อน</h3>
+              <p class="who-card__text">เรียนรู้วิธีช่วยเหลือคนที่คุณห่วงใย</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contact options: Phone Card (dominant) + Chat Card (secondary, text + QR
+           feature panel on desktop). Orange reserved for Phone only, per
+           ui/color-guideline.md. -->
+      <section class="section section--tint" id="contact-options" aria-labelledby="contact-options-heading">
+        <div class="wrap">
+          <h2 id="contact-options-heading" class="section__title section__title--center">เลือกช่องทางที่เหมาะกับคุณ</h2>
+          <p class="section__lead section__lead--center">
+            เลือกวิธีที่สะดวกสำหรับคุณ เริ่มจากการโทรหรือพิมพ์ข้อความก็ได้
+          </p>
+          <div class="contact-grid">
+            <div class="contact-card contact-card--phone">
+              <span class="contact-card__badge">โทรศัพท์</span>
+              <p class="contact-card__eyebrow">พร้อมคุยตอนนี้</p>
+              <h3 class="contact-card__title contact-card__title--phone">
+                โทร <span class="contact-card__number">1600</span>
+              </h3>
+              <p class="contact-card__text">พูดคุยกับผู้ให้คำปรึกษา เพื่อวางแผนลดหรือเลิกในแบบที่เหมาะกับคุณ</p>
+              <p class="contact-card__meta">ทุกวัน 09.00–20.00 น.</p>
+              <a class="btn btn-primary" href="tel:1600">
+                <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.6c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"
+                  />
+                </svg>
+                <span>โทร 1600</span>
+              </a>
+            </div>
+
+            <div class="contact-card contact-card--chat">
+              <div class="contact-card__chat-layout">
+                <div class="contact-card__chat-content">
+                  <span class="contact-card__badge">AI Chatbot</span>
+                  <p class="contact-card__eyebrow">ยังไม่สะดวกโทร</p>
+
+                  <div class="contact-card__brand">
+                    <img
+                      class="quitbot-avatar"
+                      src="../ui/AI chatbot-น้องวันใหม่ logo.png"
+                      alt="น้องวันใหม่ AI QuitBot"
+                    />
+                    <h3 class="contact-card__title">น้องวันใหม่ AI QuitBot</h3>
+                  </div>
+
+                  <p class="contact-card__text">ผู้ช่วยตลอด 24 ชั่วโมง สำหรับเริ่มต้นพูดคุย รับคำแนะนำ และค้นหาแนวทางที่เหมาะกับคุณ</p>
+                  <p class="contact-card__text line-id">LINE ID: @wanmai1600</p>
+
+                  <a class="btn btn-secondary" href="https://line.me/R/ti/p/@wanmai1600">
+                    <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+                      <path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-4 4v-4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" />
+                    </svg>
+                    <span>เริ่มแชท</span>
+                  </a>
+                </div>
+
+                <!-- TODO(content-owner): real QR asset not yet in /assets — add
+                     assets/line-quitbot-qr.png encoding the LINE add-friend URL
+                     above. Falls back to hiding this panel if the image 404s;
+                     the direct Chat button above remains the primary path. -->
+                <div class="contact-card__qr">
+                  <img
+                    src="../assets/line-quitbot-qr.png"
+                    alt="คิวอาร์โค้ดสำหรับแชทกับน้องวันใหม่ AI QuitBot"
+                    onerror="this.closest('.contact-card__qr').style.display='none'"
+                  />
+                  <p>สแกนเพื่อเริ่มแชท</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What to expect: demystify contact before asking again -->
+      <section class="section" id="what-to-expect" aria-labelledby="what-to-expect-heading">
+        <div class="wrap">
+          <h2 id="what-to-expect-heading" class="section__title section__title--center">เมื่อคุณติดต่อเรา</h2>
+          <ol class="steps">
+            <li class="step">
+              <span class="step__number" aria-hidden="true">1</span>
+              <h3 class="step__title">เลือกช่องทางที่สะดวก</h3>
+              <p class="step__text">โทรหรือแชท เลือกได้ตามที่คุณสะดวกในตอนนั้น</p>
+            </li>
+            <li class="step-arrow" aria-hidden="true">&rarr;</li>
+            <li class="step">
+              <span class="step__number" aria-hidden="true">2</span>
+              <h3 class="step__title">เรารับฟังและทำความเข้าใจ</h3>
+              <p class="step__text">ไม่มีการตัดสิน เราฟังสถานการณ์ของคุณก่อนเสมอ</p>
+            </li>
+            <li class="step-arrow" aria-hidden="true">&rarr;</li>
+            <li class="step">
+              <span class="step__number" aria-hidden="true">3</span>
+              <h3 class="step__title">ร่วมกันมองหาทางเลือก</h3>
+              <p class="step__text">คุยหาแนวทางที่เหมาะกับคุณโดยเฉพาะ</p>
+            </li>
+            <li class="step-arrow" aria-hidden="true">&rarr;</li>
+            <li class="step">
+              <span class="step__number" aria-hidden="true">4</span>
+              <h3 class="step__title">คุณเลือกขั้นตอนต่อไป</h3>
+              <p class="step__text">คุณเป็นคนตัดสินใจว่าจะก้าวต่อไปอย่างไร</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Featured Vaping Education: renders exactly once, approved copy only -->
+      <section class="section section--tint" id="vaping-education" aria-labelledby="vaping-education-heading">
+        <div class="wrap">
+          <h2 id="vaping-education-heading" class="section__title section__title--center">สิ่งที่ควรรู้เกี่ยวกับบุหรี่ไฟฟ้า</h2>
+          <p class="section__lead section__lead--center">
+            บุหรี่ไฟฟ้าอาจดูต่างจากบุหรี่มวน แต่ละอองที่สูดเข้าไปไม่ใช่เพียงไอน้ำ
+            และอาจมีนิโคตินหรือสารอื่นร่วมด้วย
+          </p>
+
+          <button
+            class="vaping-edu__toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="vaping-education-content"
+            data-label-collapsed="ดูสิ่งที่ควรรู้"
+            data-label-expanded="ซ่อนข้อมูล"
+          >
+            <span class="vaping-edu__toggle-label">ดูสิ่งที่ควรรู้</span>
+            <svg class="vaping-edu__toggle-icon" aria-hidden="true" viewBox="0 0 20 20" focusable="false">
+              <path d="M5 7.5 10 12.5 15 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <div class="vaping-edu__collapsible" id="vaping-education-content" hidden>
+            <ul class="vaping-edu__points">
+              <li class="vaping-edu__point">
+                <span class="vaping-edu__number" aria-hidden="true">01</span>
+                <div class="vaping-edu__content">
+                  <h3 class="vaping-edu__point-title">ทำไมถึงอยากสูบซ้ำ</h3>
+                  <p class="vaping-edu__point-text">นิโคตินทำให้เกิดการพึ่งพาและอาจทำให้รู้สึกอยากใช้ซ้ำบ่อยขึ้น</p>
+                </div>
+              </li>
+              <li class="vaping-edu__point vaping-edu__point--emphasis">
+                <span class="vaping-edu__number" aria-hidden="true">02</span>
+                <div class="vaping-edu__content">
+                  <h3 class="vaping-edu__point-title">สูบบ่อยโดยไม่ทันสังเกต</h3>
+                  <p class="vaping-edu__point-text">บุหรี่ไฟฟ้าอาจหยิบใช้ได้ง่ายและต่อเนื่องจนสังเกตปริมาณการใช้ได้ยาก</p>
+                </div>
+              </li>
+              <li class="vaping-edu__point">
+                <span class="vaping-edu__number" aria-hidden="true">03</span>
+                <div class="vaping-edu__content">
+                  <h3 class="vaping-edu__point-title">ไม่ใช่แค่ไอน้ำ</h3>
+                  <p class="vaping-edu__point-text">ละอองอาจมีนิโคติน สารเคมี หรืออนุภาคขนาดเล็ก</p>
+                </div>
+              </li>
+              <li class="vaping-edu__point">
+                <span class="vaping-edu__number" aria-hidden="true">04</span>
+                <div class="vaping-edu__content">
+                  <h3 class="vaping-edu__point-title">ผลกระทบระยะยาว</h3>
+                  <p class="vaping-edu__point-text">ผลระยะยาวยังอยู่ระหว่างการศึกษา แต่ไม่ได้หมายความว่าบุหรี่ไฟฟ้าปลอดภัย</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="vaping-edu__actions">
+              <!-- /resources/vaping-and-nicotine is not yet built; link kept per
+                   content-requirements.md §10 and wireframe-plan.md §21. -->
+              <a class="btn btn-secondary" href="/resources/vaping-and-nicotine">ดูข้อมูลเกี่ยวกับบุหรี่ไฟฟ้า</a>
+              <p class="vaping-edu__next">
+                อยากลดการสูบ? แต่ยังไม่สะดวกโทร?
+                <a href="https://line.me/R/ti/p/@wanmai1600">แชทกับเรา &rarr;</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Support topics: practical entry points, summary cards only (no duplicated education content) -->
+      <section class="section" id="support-topics" aria-labelledby="support-topics-heading">
+        <div class="wrap">
+          <h2 id="support-topics-heading" class="section__title section__title--center">เริ่มจากเรื่องที่ใกล้ตัวคุณ</h2>
+          <ul class="topic-grid">
+            <li class="topic-card">
+              <span class="icon-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M4 12.5 9 17l11-11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <h3 class="topic-card__title">เตรียมตัวให้พร้อม</h3>
+              <p class="topic-card__text">ตั้งเป้าหมายที่ทำได้จริงสำหรับตัวคุณ</p>
+            </li>
+            <li class="topic-card">
+              <span class="icon-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M12 3a6 6 0 0 0-4 10.5V16a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.5A6 6 0 0 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                  <path d="M10 21h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <h3 class="topic-card__title">รับมือกับความอยาก</h3>
+              <p class="topic-card__text">วิธีตั้งรับเมื่อความอยากเกิดขึ้นกะทันหัน</p>
+            </li>
+            <li class="topic-card">
+              <span class="icon-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <h3 class="topic-card__title">รู้จักตัวกระตุ้น</h3>
+              <p class="topic-card__text">สังเกตสถานการณ์ที่มักทำให้คุณอยากใช้</p>
+            </li>
+            <li class="topic-card">
+              <span class="icon-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M5 16h9a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="18.5" cy="16" r="1.2" fill="currentColor"/>
+                </svg>
+              </span>
+              <h3 class="topic-card__title">บุหรี่ไฟฟ้าและนิโคติน</h3>
+              <p class="topic-card__text">ทำความเข้าใจการพึ่งพานิโคตินให้มากขึ้น</p>
+            </li>
+            <li class="topic-card">
+              <span class="icon-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <circle cx="8.5" cy="8" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <circle cx="16" cy="9" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M3.5 18c.5-2.8 2.5-4.5 5-4.5s4.5 1.7 5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M13.5 14c2 0 3.6 1.5 4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <h3 class="topic-card__title">รับมือกับแรงกดดันจากเพื่อน</h3>
+              <p class="topic-card__text">พูดปฏิเสธอย่างมั่นใจโดยไม่กระอักกระอ่วน</p>
+            </li>
+            <li class="topic-card">
+              <span class="icon-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M19 6a7 7 0 1 0 1.7 7.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M19 3v4h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <h3 class="topic-card__title">กลับมาเริ่มใหม่</h3>
+              <p class="topic-card__text">พลาดไปบ้างก็เริ่มต้นใหม่ได้เสมอ</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Support someone else -->
+      <section class="section section--tint" id="support-someone" aria-labelledby="support-someone-heading">
+        <div class="wrap support-someone__inner">
+          <div>
+            <h2 id="support-someone-heading" class="section__title">ช่วยคนที่คุณห่วงใย</h2>
+            <p class="section__lead">เรียนรู้วิธีพูดคุย ให้กำลังใจ และช่วยเหลือโดยไม่กดดันหรือตัดสิน</p>
+          </div>
+          <!-- /support-someone is not yet built; link kept per sitemap.md -->
+          <a class="btn btn-secondary" href="/support-someone">ดูวิธีช่วยเหลือ</a>
+        </div>
+      </section>
+
+      <!-- FAQ: accessible native accordion. Answers are composed only from approved
+           copy blocks elsewhere in content-requirements.md — no new health claims. -->
+      <section class="section" id="faq" aria-labelledby="faq-heading">
+        <div class="wrap">
+          <h2 id="faq-heading" class="section__title section__title--center">คำถามที่คุณอาจกำลังสงสัย</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary class="faq-item__question">บุหรี่ไฟฟ้าแตกต่างจากบุหรี่มวนอย่างไร?</summary>
+              <p class="faq-item__answer">บุหรี่ไฟฟ้าไม่มีควันหรือกลิ่นแบบบุหรี่มวน แต่ละอองที่ปล่อยออกมาไม่ใช่เพียงไอน้ำ และอาจมีนิโคติน สารเคมี หรืออนุภาคขนาดเล็ก</p>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-item__question">ละอองบุหรี่ไฟฟ้าเป็นเพียงไอน้ำหรือไม่?</summary>
+              <p class="faq-item__answer">ไม่ใช่ ละอองจากบุหรี่ไฟฟ้าไม่ใช่เพียงไอน้ำ อาจมีนิโคติน สารเคมี หรืออนุภาคขนาดเล็ก</p>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-item__question">ใช้บุหรี่ไฟฟ้าทั้งวันเกี่ยวข้องกับนิโคตินอย่างไร?</summary>
+              <p class="faq-item__answer">นิโคตินทำให้เกิดการพึ่งพาและอาจทำให้รู้สึกอยากใช้ซ้ำบ่อยขึ้น บุหรี่ไฟฟ้าอาจหยิบใช้ได้ง่ายและต่อเนื่องจนสังเกตปริมาณการใช้ได้ยาก</p>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-item__question">ยังไม่พร้อมเลิก สามารถติดต่อมาปรึกษาได้ไหม?</summary>
+              <p class="faq-item__answer">ได้ คุณไม่จำเป็นต้องพร้อมเลิกทันที เริ่มต้นเมื่อคุณพร้อม และเลือกก้าวถัดไปได้เอง</p>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-item__question">โทรและแชทต่างกันอย่างไร?</summary>
+              <p class="faq-item__answer">โทร 1600 เหมาะสำหรับผู้ที่พร้อมพูดคุยและต้องการคำแนะนำผ่านโทรศัพท์ ส่วนแชทกับเราเหมาะสำหรับผู้ที่ยังไม่สะดวกโทรและอยากเริ่มต้นจากการพิมพ์ข้อความ</p>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-item__question">แชทเป็น Bot หรือเจ้าหน้าที่?</summary>
+              <p class="faq-item__answer">แชทกับเราคือการสนทนากับน้องวันใหม่ AI QuitBot</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="section cta-repeat" id="final-cta">
+        <div class="wrap cta-repeat__inner">
+          <h2 class="section__title">พร้อมเมื่อไร เราพร้อมรับฟัง</h2>
+          <a class="btn btn-primary" href="tel:1600">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.6c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"
+              />
+            </svg>
+            <span>โทร 1600</span>
+          </a>
+          <p class="final-cta__alt">
+            ยังไม่สะดวกโทร?
+            <a href="https://line.me/R/ti/p/@wanmai1600">แชทกับเรา →</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer: institutional info near the bottom, per content-hierarchy.md Priority 7 -->
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div class="footer-col">
+          <img
+            class="site-footer__logo"
+            src="../ui/Quitline 1600 logo.png"
+            alt="Quitline 1600 สายด่วนเลิกบุหรี่"
+          />
+          <p class="site-footer__number">Quitline 1600 สายด่วนเลิกบุหรี่</p>
+        </div>
+
+        <nav class="footer-col" aria-label="ขอความช่วยเหลือ">
+          <h2 class="footer-col__title">ขอความช่วยเหลือ</h2>
+          <ul class="footer-col__list">
+            <li><a href="#audience">เราช่วยใคร</a></li>
+            <li><a href="#contact-options">เลือกช่องทางที่เหมาะกับคุณ</a></li>
+            <li><a href="#what-to-expect">เมื่อคุณติดต่อเรา</a></li>
+            <li><a href="#faq">คำถามที่พบบ่อย</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="เริ่มจากเรื่องที่ใกล้ตัวคุณ">
+          <h2 class="footer-col__title">เริ่มจากเรื่องที่ใกล้ตัวคุณ</h2>
+          <ul class="footer-col__list">
+            <li><a href="#support-topics">เตรียมตัวให้พร้อม</a></li>
+            <li><a href="#support-topics">รับมือกับความอยาก</a></li>
+            <li><a href="#support-topics">บุหรี่ไฟฟ้าและนิโคติน</a></li>
+            <li><a href="#support-topics">กลับมาเริ่มใหม่</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h2 class="footer-col__title">เกี่ยวกับเรา</h2>
+          <ul class="footer-col__list footer-col__list--static">
+            <li>เกี่ยวกับสายด่วน 1600</li>
+            <li>ความเป็นส่วนตัว</li>
+            <li>การเข้าถึงเว็บไซต์</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h2 class="footer-col__title">ติดต่อเรา</h2>
+          <ul class="footer-col__list">
+            <li><a href="tel:1600">โทร 1600</a></li>
+            <li><a href="https://line.me/R/ti/p/@wanmai1600">แชทกับเรา</a></li>
+            <li class="line-id">LINE ID: @wanmai1600</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Chat invitation: polite, secondary to the Phone CTA. Non-modal
+         disclosure (role="dialog", no aria-modal, no focus trap). Uses the same
+         verified LINE Chat URL as every other Chat link on the page. -->
+    <div class="floating-chat" data-floating-chat>
+      <div
+        class="floating-chat__panel"
+        id="floating-chat-panel"
+        role="dialog"
+        aria-labelledby="floating-chat-title"
+        aria-describedby="floating-chat-description"
+        hidden
+      >
+        <button
+          class="floating-chat__close"
+          type="button"
+          aria-label="ปิดกล่องแชท"
+          data-chat-close
+        >
+          &times;
+        </button>
+
+        <div class="floating-chat__header">
+          <img
+            class="floating-chat__avatar"
+            src="../ui/AI chatbot-น้องวันใหม่ logo.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <div>
+            <p class="floating-chat__eyebrow">AI Chatbot</p>
+            <h2 class="floating-chat__title" id="floating-chat-title">น้องวันใหม่ AI QuitBot</h2>
+          </div>
+        </div>
+
+        <p class="floating-chat__description" id="floating-chat-description">
+          ยังไม่สะดวกโทร? เริ่มจากพิมพ์คุย รับคำแนะนำ และค้นหาแนวทางที่เหมาะกับคุณได้ตลอด 24 ชั่วโมง
+        </p>
+
+        <div class="floating-chat__actions">
+          <a
+            class="btn btn-secondary floating-chat__start"
+            href="https://line.me/R/ti/p/@wanmai1600"
+            data-chat-start
+          >
+            เริ่มแชท
+          </a>
+          <button class="floating-chat__later" type="button" data-chat-later>
+            ไว้ทีหลัง
+          </button>
+        </div>
+      </div>
+
+      <button
+        class="floating-chat__launcher"
+        type="button"
+        aria-expanded="false"
+        aria-controls="floating-chat-panel"
+        data-chat-launcher
+      >
+        <img
+          class="floating-chat__launcher-avatar"
+          src="../ui/AI chatbot-น้องวันใหม่ logo.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <span>แชทกับน้องวันใหม่</span>
+      </button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
